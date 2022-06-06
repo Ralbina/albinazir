@@ -1,0 +1,26 @@
+.btn {
+  background-color: #cb3589;
+  color: white;
+}
+.btn:hover {
+  background-color: white;
+  color: #cd4090;
+}
+.me-2 {
+  color: #cd4090;
+}
+.home {
+  text-decoration: none;
+  color: #cd4090;
+}
+.home.hover {
+  color: #cd4090;
+}
+.logoup {
+  width: 100%;
+  height: 30px;
+}
+/* .logo1 {
+  display: flex;
+  flex-direction: row;
+} */
