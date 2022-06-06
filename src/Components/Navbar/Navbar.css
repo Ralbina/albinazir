@@ -1,0 +1,17 @@
+.navbar-container {
+  background-color: white !important;
+  color: black !important;
+}
+.btn {
+  background-color: #cb3589 !important;
+}
+.circleIconMail {
+  background-color: #cb3589 !important;
+}
+#logo {
+  display: flex;
+  flex-direction: column;
+}
+#iceWhite {
+  margin-left: 45px;
+}
