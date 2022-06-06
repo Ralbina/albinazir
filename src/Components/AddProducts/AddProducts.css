@@ -1,0 +1,25 @@
+.add {
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.btn-1 {
+  border-radius: 10px;
+  background: rgba(44, 130, 253, 0.15);
+  color: #398bff;
+  font-weight: 600;
+  width: 140px;
+  height: 40px;
+  margin-top: 20px;
+  border: 2px rgba(44, 130, 253, 0.15) solid;
+}
+.btn:hover {
+  width: 141px;
+  height: 41px;
+  transition: 0.2s;
+  background-color: #398bff;
+}
