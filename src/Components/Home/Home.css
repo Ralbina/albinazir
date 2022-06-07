@@ -16,8 +16,8 @@
 }
 .container2 {
   text-align: center;
-  padding: 100px;
-  background-color: rgb(251, 242, 244);
+  padding: 100px 300px 100px 300px;
+  background-color: white;
 }
 #container3 {
   display: flex;
@@ -25,6 +25,7 @@
 #img1 {
   width: 800px;
   height: 800px;
+  border-radius: 0px 0 300px 300px;
 }
 #text {
   /* justify-content: center; */
@@ -32,18 +33,122 @@
   padding: 150px;
 }
 .container4 {
+  display: flex;
   text-align: center;
   padding: 100px;
-  background-color: rgb(251, 242, 244);
+  background: rgb(228, 34, 141);
+  background: radial-gradient(
+    circle,
+    rgba(228, 34, 141, 1) 0%,
+    rgba(242, 121, 190, 1) 100%
+  );
+  border-radius: 20px 300px 300px 0;
+  color: rgb(70, 6, 47);
+}
+#logo1 {
+  width: 400px;
 }
 .container5 {
   display: flex;
   text-align: center;
+  color: rgb(140, 92, 3);
 }
-#cafe {
-  width: 600px;
-  height: 800px;
+#moreice {
+  width: 800px;
+  height: 600px;
 }
 #text2 {
   padding: 250px;
+}
+
+.text5 {
+  padding-top: 250px;
+}
+.container6 {
+  display: flex;
+
+  text-align: center;
+}
+.container7 {
+  display: flex;
+}
+#logoapp {
+  width: 500px;
+  height: 800px;
+  padding-right: 100px;
+}
+.k {
+  width: 300px;
+  height: 300px;
+  border-radius: 300px;
+  padding: 30px;
+}
+.k:hover {
+  width: 320px;
+  height: 320px;
+}
+.h2K {
+  color: #bc066d;
+  text-align: center;
+}
+#carousel {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#btn {
+  margin: 30px;
+  padding: 15px;
+}
+#logo1 {
+  padding: 0 100px 0 100px;
+}
+#gif {
+  border-radius: 0 300px 300px 0;
+}
+#choko {
+  width: 100%;
+  height: 60px;
+}
+#girl1 {
+  display: flex;
+  border-radius: 200px 0 0 200px;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+.text5_5 {
+  margin: 40px;
+  text-align: center;
+  color: aliceblue;
+}
+#girl {
+  padding-left: 300px;
+  width: 200px;
+}
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  background: rgb(242, 121, 190) !important;
+  background: radial-gradient(
+    circle,
+    rgba(242, 121, 190, 1) 0%,
+    rgba(228, 34, 141, 1) 100%
+  ) !important;
+  color: aliceblue;
+}
+#logoFooter {
+  width: 200px;
+}
+video {
+  width: 800px;
+  border-radius: 400px;
+}
+#container7 {
+  display: flex;
+  text-align: center;
 }
