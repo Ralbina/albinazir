@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "name": "test_project",
-=======
   "name": "albinazir",
->>>>>>> 045859257659603afb4606e63fee44b250bf493c
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,11 +17,8 @@
     "react-dom": "^18.1.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
-<<<<<<< HEAD
     "react-toastify": "^9.0.3",
     "swiper": "^8.2.2",
-=======
->>>>>>> 045859257659603afb4606e63fee44b250bf493c
     "web-vitals": "^2.1.4"
   },
   "scripts": {

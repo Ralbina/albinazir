@@ -1,14 +1,5 @@
 import React from "react";
 import "./Home.css";
-<<<<<<< HEAD
-import cafe from "../../assets/image/cafe.PNG";
-import img1 from "../../assets/image/123.png";
-import line from "../../assets/image/logoup.PNG";
-import logocryon from "../../assets/image/logoCryon.PNG";
-import logoapp from "../../assets/image/logoapp.PNG";
-import { Button } from "@mui/material";
-import { NavLink } from "react-router-dom";
-=======
 import img1 from "../../assets/image/123.png";
 import line from "../../assets/image/logoup.PNG";
 import girl from "../../assets/image/hotGirl.png";
@@ -26,7 +17,6 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import video from "../../assets/video/video.mp4";
->>>>>>> 045859257659603afb4606e63fee44b250bf493c
 
 const Home = () => {
   return (
@@ -51,30 +41,6 @@ const Home = () => {
           </h2>
         </div>
       </div>
-<<<<<<< HEAD
-      <div id="container3">
-        <img id="img1" src={img1} alt="img1" />
-        <div id="text">
-          <h2>
-            1Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
-            voluptatem.
-          </h2>
-          <img id="line" src={line} alt="BG2" />
-          <h2>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
-            reiciendis voluptatum accusamus explicabo soluta voluptate. Laborum
-            earum minus rerum aliquam! Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. In officia consectetur exercitationem earum!
-            Accusantium est illum, sit error optio voluptas.
-          </h2>
-          <NavLink to="/products">
-            <Button>Get to Shop</Button>
-          </NavLink>
-        </div>
-      </div>
-      <div className="container4">
-        <div>
-=======
       <div id="carousel">
         <div>
           <img className="k" src={k2} alt="BG2" />
@@ -95,7 +61,6 @@ const Home = () => {
       </div>
       <div className="container4">
         <div className="text2">
->>>>>>> 045859257659603afb4606e63fee44b250bf493c
           <h1 id="h1">A Little Bit of History</h1>
           <img id="line" src={line} alt="BG2" />
 
@@ -114,11 +79,6 @@ const Home = () => {
             yay-worthy scoop ready for you. And we think that's pretty cool.
           </h2>
         </div>
-<<<<<<< HEAD
-      </div>
-      <div className="container5">
-        <div id="text2">
-=======
         <img id="logo1" src={logo1} alt="BG2" />
       </div>
       <div id="container3">
@@ -160,7 +120,6 @@ const Home = () => {
 
       <div className="container5">
         <div className="text5">
->>>>>>> 045859257659603afb4606e63fee44b250bf493c
           <h1 id="h1">Keepin’ It Local</h1>
           <img id="line" src={line} alt="BG2" />
 
@@ -171,17 +130,6 @@ const Home = () => {
           </h2>
         </div>
         <div>
-<<<<<<< HEAD
-          <img id="cafe" src={cafe} />
-        </div>
-      </div>
-      <div className="container6">
-        <div>
-          <img id="logocryon" src={logocryon} />
-        </div>
-        <div id="text2">
-          <h1 id="h1">Keepin’ It Local</h1>
-=======
           <img id="moreice" src={moreice} alt="BG2" />
         </div>
       </div>
@@ -190,7 +138,6 @@ const Home = () => {
         <img id="gif" src={gif} alt="BG2" />
         <div className="text2">
           <h1 id="h1">GIF Lorem ipsum dolor sit amet.</h1>
->>>>>>> 045859257659603afb4606e63fee44b250bf493c
           <img id="line" src={line} alt="BG2" />
           <h2>
             All of our 2400+ locations in the United States are locally owned
@@ -199,24 +146,6 @@ const Home = () => {
           </h2>
         </div>
       </div>
-<<<<<<< HEAD
-      <div className="container7">
-        <div id="text2">
-          <h1 id="h1">Keepin’ It Local</h1>
-          <img id="line" src={line} alt="BG2" />
-
-          <h2>
-            All of our 2400+ locations in the United States are locally owned
-            and operated. So, no matter which shop you visit, you’re always
-            supporting a local business. And that’s a reason to celebrate.
-          </h2>
-        </div>
-        <div>
-          <img id="logoapp" src={logoapp} />
-        </div>
-      </div>
-      <footer></footer>
-=======
       <div id="container7">
         <div className="h2K">
           <h1 id="h1">GIF Lorem ipsum dolor sit amet.</h1>
@@ -264,7 +193,6 @@ const Home = () => {
           <h3>Get the scoop </h3>
         </div>
       </footer>
->>>>>>> 045859257659603afb4606e63fee44b250bf493c
     </>
   );
 };

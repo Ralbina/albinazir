@@ -1,8 +1,4 @@
 #container1 {
-<<<<<<< HEAD
-  /* display: none; */
-=======
->>>>>>> 045859257659603afb4606e63fee44b250bf493c
   background-image: url("../../assets/image/asd.jpeg");
   text-align: center;
   padding-top: 100px;
@@ -20,13 +16,8 @@
 }
 .container2 {
   text-align: center;
-<<<<<<< HEAD
-  padding: 100px;
-  background-color: rgb(251, 242, 244);
-=======
   padding: 100px 300px 100px 300px;
   background-color: white;
->>>>>>> 045859257659603afb4606e63fee44b250bf493c
 }
 #container3 {
   display: flex;
@@ -34,11 +25,7 @@
 #img1 {
   width: 800px;
   height: 800px;
-<<<<<<< HEAD
-  border-radius: 20px 0 0 20px;
-=======
   border-radius: 0px 0 300px 300px;
->>>>>>> 045859257659603afb4606e63fee44b250bf493c
 }
 #text {
   /* justify-content: center; */
@@ -46,12 +33,6 @@
   padding: 150px;
 }
 .container4 {
-<<<<<<< HEAD
-  text-align: center;
-  padding: 100px;
-  background-color: #d6559e;
-  border-radius: 20px 0 20px 0;
-=======
   display: flex;
   text-align: center;
   padding: 100px;
@@ -66,33 +47,19 @@
 }
 #logo1 {
   width: 400px;
->>>>>>> 045859257659603afb4606e63fee44b250bf493c
 }
 .container5 {
   display: flex;
   text-align: center;
-<<<<<<< HEAD
-}
-#cafe {
-  width: 600px;
-  height: 800px;
-=======
   color: rgb(140, 92, 3);
 }
 #moreice {
   width: 800px;
   height: 600px;
->>>>>>> 045859257659603afb4606e63fee44b250bf493c
 }
 #text2 {
   padding: 250px;
 }
-<<<<<<< HEAD
-.container6 {
-  display: flex;
-  text-align: center;
-  background-color: #f2f6f7;
-=======
 
 .text5 {
   padding-top: 250px;
@@ -101,7 +68,6 @@
   display: flex;
 
   text-align: center;
->>>>>>> 045859257659603afb4606e63fee44b250bf493c
 }
 .container7 {
   display: flex;
@@ -111,8 +77,6 @@
   height: 800px;
   padding-right: 100px;
 }
-<<<<<<< HEAD
-=======
 .k {
   width: 300px;
   height: 300px;
@@ -188,4 +152,3 @@ video {
   display: flex;
   text-align: center;
 }
->>>>>>> 045859257659603afb4606e63fee44b250bf493c

@@ -1,16 +1,4 @@
 .navbar-container {
-<<<<<<< HEAD
-  background-color: rgb(150, 24, 116) !important;
-}
-
-.circleIconMail {
-  background-color: purple !important;
-}
-
-.btn-navbar {
-  margin-left: 20px !important;
-  background-color: rgb(255, 160, 240) !important;
-=======
   background: rgb(242, 121, 190) !important;
   background: radial-gradient(
     circle,
@@ -33,5 +21,4 @@
   margin-left: 45px;
   margin-bottom: 15px;
   margin-top: 15px;
->>>>>>> 045859257659603afb4606e63fee44b250bf493c
 }
