@@ -1,0 +1,65 @@
+#container1 {
+  /* display: none; */
+  background-image: url("../../assets/image/asd.jpeg");
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: blueviolet;
+}
+
+#logo2 {
+  width: 100%;
+}
+#line {
+  width: 100px;
+  height: 5px;
+  border-radius: 10px;
+}
+.container2 {
+  text-align: center;
+  padding: 100px;
+  background-color: rgb(251, 242, 244);
+}
+#container3 {
+  display: flex;
+}
+#img1 {
+  width: 800px;
+  height: 800px;
+  border-radius: 20px 0 0 20px;
+}
+#text {
+  /* justify-content: center; */
+  text-align: center;
+  padding: 150px;
+}
+.container4 {
+  text-align: center;
+  padding: 100px;
+  background-color: #d6559e;
+  border-radius: 20px 0 20px 0;
+}
+.container5 {
+  display: flex;
+  text-align: center;
+}
+#cafe {
+  width: 600px;
+  height: 800px;
+}
+#text2 {
+  padding: 250px;
+}
+.container6 {
+  display: flex;
+  text-align: center;
+  background-color: #f2f6f7;
+}
+.container7 {
+  display: flex;
+}
+#logoapp {
+  width: 500px;
+  height: 800px;
+  padding-right: 100px;
+}
