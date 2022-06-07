@@ -1,0 +1,83 @@
+/* .inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 10px;
+  margin-top: 40px;
+}
+
+.inp1 {
+  margin: 20px 200px !important;
+  width: 700px;
+}
+
+.inp2 {
+  margin: 20px 200px !important;
+  width: 700px;
+}
+
+.inp3 {
+  margin: 20px 200px !important;
+  width: 700px;
+}
+
+.inp4 {
+  margin: 20px 200px !important;
+  width: 700px;
+}
+
+.inp5 {
+  margin: 20px 200px !important;
+  width: 700px;
+}
+
+.inp6 {
+  margin: 20px 200px !important;
+  width: 700px;
+}
+
+.inp7 {
+  margin: 20px 200px !important;
+  width: 700px;
+}
+
+.btnSave {
+  width: 200px;
+  height: 50px;
+  margin-top: 40px !important;
+} */
+.fon {
+  background-image: url("../../../assets/image/fonAdd2.jpeg");
+  width: 100%;
+  height: 680px;
+  padding-top: 130px;
+}
+
+.add {
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.btn5 {
+  border-radius: 10px;
+  background: rgba(44, 130, 253, 0.15);
+  color: #f030ed;
+  font-weight: 600;
+  width: 140px;
+  height: 40px;
+  margin-top: 20px;
+  border: 2px rgba(44, 130, 253, 0.15) solid;
+}
+.btn5:hover {
+  width: 141px;
+  height: 41px;
+  transition: 0.2s;
+  background-color: #f952e5;
+}
+/* .inp {
+ 
+} */

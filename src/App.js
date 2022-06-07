@@ -1,20 +1,20 @@
-import { BrowserRouter } from "react-router-dom";
+import React from "react";
 import "./App.css";
-import AddProducts from "./Components/AddProducts/AddProducts";
-import Home from "./Components/Home/Home";
-import MainRoutes from "./Components/MainRoutes";
 import PrimarySearchAppBar from "./Components/Navbar/Navbar";
-import Navbar1 from "./Components/Navbar/Navbar";
-import Products from "./Components/Products/Products";
+import { BrowserRouter } from "react-router-dom";
+import MainRoutes from "./MainRoutes";
+import ProductContext from "./Context/ProductContext";
+import "./App.css";
 
 function App() {
   return (
     <BrowserRouter>
-      <PrimarySearchAppBar />
-      <MainRoutes />
-      {/* <Home /> */}
-      {/* <AddProducts /> */}
-      {/* <Products /> */}
+      <ProductContext>
+        <PrimarySearchAppBar />
+        <MainRoutes />
+
+        {/* <Home /> */}
+      </ProductContext>
     </BrowserRouter>
   );
 }

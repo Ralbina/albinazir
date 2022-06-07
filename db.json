@@ -1,3 +1,44 @@
 {
-  "products": []
+  "products": [
+    {
+      "title": "Ассорти Мороженое",
+      "type": "Мороженое",
+      "description": "Вкуснятина",
+      "price": "200",
+      "img1": "http://www.menslife.com/upload/iblock/7ad/morozhenoe_polza_ili_vred.jpg",
+      "id": 8
+    },
+    {
+      "title": "Ягодный молочный коктейль",
+      "type": " Коктейль",
+      "description": "Разнообразить диету поможет ягодный молочный коктейль на кефире. Максимум пользы и минимум калорий.",
+      "price": "100",
+      "img1": "https://www.maggi.ru/data/images/recept/img640x500/recept_6461_md4j.jpg",
+      "id": 9
+    },
+    {
+      "title": "Пончики",
+      "type": "donuts",
+      "description": "Сладкие, пышные и очень вкусные пончики",
+      "price": "50",
+      "img1": "https://sugargeekshow.com/wp-content/uploads/2020/10/baked_donut_recipe_featured.jpg",
+      "id": 10
+    },
+    {
+      "title": "111111",
+      "type": "11111",
+      "description": "asdfd",
+      "price": "asfasdf",
+      "img1": "asfasd",
+      "id": 11
+    },
+    {
+      "title": "2222",
+      "type": "2222",
+      "description": "2222",
+      "price": "222",
+      "img1": "2222",
+      "id": 12
+    }
+  ]
 }
