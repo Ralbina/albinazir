@@ -1,6 +1,11 @@
 .navbar-container {
-  background-color: white !important;
-  color: black !important;
+  background: rgb(242, 121, 190) !important;
+  background: radial-gradient(
+    circle,
+    rgba(242, 121, 190, 1) 0%,
+    rgba(228, 34, 141, 1) 100%
+  ) !important;
+  /* position: fixed; */
 }
 .btn {
   background-color: #cb3589 !important;
@@ -14,4 +19,6 @@
 }
 #iceWhite {
   margin-left: 45px;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }

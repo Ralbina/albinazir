@@ -22,6 +22,7 @@ import { NavLink } from "react-router-dom";
 import logoup from "../../assets/image/logoup.PNG";
 import logoWhite from "../../assets/image/logoWhite.PNG";
 import logo12 from "../../assets/image/logo1-2.PNG";
+import logopink from "../../assets/image/logoPink.PNG";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -154,25 +155,15 @@ export default function PrimarySearchAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" className="navbar-container">
-        <img alt="" src={logoup} width="100%" height="40" className="logo" />{" "}
         <Toolbar>
-          <div id="logo">
-            <img
-              id="iceWhite"
-              alt=""
-              src={logoWhite}
-              width="40"
-              height="70"
-              className="logo"
-            />{" "}
-            <img
-              alt=""
-              src={logo12}
-              width="130"
-              height="30"
-              className="logo1"
-            />{" "}
-          </div>
+          <img
+            id="iceWhite"
+            alt=""
+            src={logopink}
+            width="80"
+            height="90"
+            className="logo"
+          />{" "}
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
