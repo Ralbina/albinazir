@@ -6,16 +6,18 @@ import CartContextProvider from "./Context/CartContext";
 import ProductContext from "./Context/ProductContext";
 import MainRoutes from "./MainRoutes";
 import "./App.css";
-
+import AuthContextProvider from "./Context/AuthContext";
 function App() {
   return (
     <BrowserRouter>
-      <CartContextProvider>
-        <ProductContext>
-          <PrimarySearchAppBar />
-          <MainRoutes />
-        </ProductContext>
-      </CartContextProvider>
+      <AuthContextProvider>
+        <CartContextProvider>
+          <ProductContext>
+            <PrimarySearchAppBar />
+            <MainRoutes />
+          </ProductContext>
+        </CartContextProvider>
+      </AuthContextProvider>
     </BrowserRouter>
   );
 }

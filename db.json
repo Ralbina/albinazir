@@ -12,7 +12,7 @@
       "title": "Ягодный молочный коктейль",
       "type": " Коктейль",
       "description": "Разнообразить диету поможет ягодный молочный коктейль на кефире. Максимум пользы и минимум калорий.",
-      "price": "100",
+      "price": "20000",
       "img1": "https://www.maggi.ru/data/images/recept/img640x500/recept_6461_md4j.jpg",
       "id": 9
     },
@@ -31,6 +31,134 @@
       "price": "hgcvhvhj",
       "img1": "hgvhvhj",
       "id": 11
+    },
+    {
+      "title": "2222",
+      "type": "2222",
+      "description": "2222",
+      "price": "222",
+      "img1": "2222",
+      "id": 12
+    },
+    {
+      "title": "hjhjbhjb`hjbh`jbb",
+      "type": "b",
+      "description": "hjb",
+      "price": "hjb",
+      "img1": "jhb",
+      "id": 13
+    },
+    {
+      "title": "bjbhjbhj",
+      "type": "bhj",
+      "description": "bhjbhjbhj",
+      "price": "bhjbhjbhj",
+      "img1": "bhjbhjbjh",
+      "id": 14
+    },
+    {
+      "title": "bjbjkbjbjkb",
+      "type": "jkbjkbjkb",
+      "description": "bjkbjbjkb",
+      "price": "jbjbjbjb",
+      "img1": "jbjkbjkbjk",
+      "id": 15
+    },
+    {
+      "title": "bjbhbbkj",
+      "type": "bjkbjkbjb",
+      "description": "bbjbjkbjbkj",
+      "price": "bjbjkbjkbjkb",
+      "img1": "kjbjkbkjbjkbjkbkj",
+      "id": 16
+    },
+    {
+      "title": "bjkjbjkbj",
+      "type": "bjkbkjbjkbkj",
+      "description": "bbjkbjbjk",
+      "price": "bjkbjkbjk",
+      "img1": "bjbjkb",
+      "id": 17
+    },
+    {
+      "title": "Ассорти Мороженое",
+      "type": "Мороженое",
+      "description": "Вкуснятина",
+      "price": "200",
+      "img1": "http://www.menslife.com/upload/iblock/7ad/morozhenoe_polza_ili_vred.jpg",
+      "id": 18
+    },
+    {
+      "title": "Ягодный молочный коктейль",
+      "type": " Коктейль",
+      "description": "Разнообразить диету поможет ягодный молочный коктейль на кефире. Максимум пользы и минимум калорий.",
+      "price": "20000",
+      "img1": "https://www.maggi.ru/data/images/recept/img640x500/recept_6461_md4j.jpg",
+      "id": 19
+    },
+    {
+      "title": "Пончики",
+      "type": "donuts",
+      "description": "Сладкие, пышные и очень вкусные пончики",
+      "price": "50",
+      "img1": "https://sugargeekshow.com/wp-content/uploads/2020/10/baked_donut_recipe_featured.jpg",
+      "id": 20
+    },
+    {
+      "title": "111111",
+      "type": "11111",
+      "description": "asdfd",
+      "price": "asfasdf",
+      "img1": "asfasd",
+      "id": 21
+    },
+    {
+      "title": "Ассорти Мороженое",
+      "type": "Мороженое",
+      "description": "Вкуснятина",
+      "price": "200",
+      "img1": "http://www.menslife.com/upload/iblock/7ad/morozhenoe_polza_ili_vred.jpg",
+      "id": 22
+    },
+    {
+      "title": "Ягодный молочный коктейль",
+      "type": " Коктейль",
+      "description": "Разнообразить диету поможет ягодный молочный коктейль на кефире. Максимум пользы и минимум калорий.",
+      "price": "20000",
+      "img1": "https://www.maggi.ru/data/images/recept/img640x500/recept_6461_md4j.jpg",
+      "id": 23
+    },
+    {
+      "title": "Пончики",
+      "type": "donuts",
+      "description": "Сладкие, пышные и очень вкусные пончики",
+      "price": "50",
+      "img1": "https://sugargeekshow.com/wp-content/uploads/2020/10/baked_donut_recipe_featured.jpg",
+      "id": 24
+    },
+    {
+      "title": "111111",
+      "type": "11111",
+      "description": "asdfd",
+      "price": "asfasdf",
+      "img1": "asfasd",
+      "id": 25
+    },
+    {
+      "title": "dwdwdw",
+      "type": "milkShake",
+      "description": "dwdwd",
+      "price": "dwdwdw",
+      "img1": "dwdwdw",
+      "id": 26
+    },
+    {
+      "title": "dwdwdwdw",
+      "type": "Milkshake",
+      "description": "wfwffw",
+      "price": "fwfwffw",
+      "img1": "fwfwfwfwfw",
+      "id": 27
     }
   ]
 }

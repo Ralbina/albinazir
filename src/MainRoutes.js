@@ -6,6 +6,7 @@ import EditProduct from "./Components/Admin/EditProduct/EditProduct";
 import Home from "./Components/Home/Home";
 import ProductsList from "./Components/ProductsList/ProductsList";
 import Cart from "./Components/Cart/Cart";
+import Login from "./Components/Auth/Login";
 
 const MainRoutes = () => {
   return (
@@ -16,6 +17,7 @@ const MainRoutes = () => {
       <Route path="/details/:id" element={<ProductDetails />} />
       <Route path="/edit/:id" element={<EditProduct />} />
       <Route path="/cart" element={<Cart />} />
+      <Route path="/login" element={<Login />} />
     </Routes>
   );
 };

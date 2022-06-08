@@ -1,11 +1,11 @@
 import { Api } from "@mui/icons-material";
 import axios from "axios";
 import React, { createContext, useReducer } from "react";
+import { useLocation } from "react-router-dom";
 
 export const productContext = createContext();
 
 const API = "http://localhost:8000/products";
-
 const INIT_STATE = {
   products: [],
   productDetails: {},
@@ -23,14 +23,14 @@ const reducer = (prevState = INIT_STATE, action) => {
 
 const ProductContext = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
-
+  const location = useLocation();
   const addProduct = async (object) => {
     //функция для добавления product в базу данных в db.json
     await axios.post(API, object);
   };
 
   const getProducts = async () => {
-    const { data } = await axios.get(API);
+    const { data } = await axios.get(`${API}${location.search}`);
     dispatch({
       type: "GET_PRODUCTS",
       payload: data,

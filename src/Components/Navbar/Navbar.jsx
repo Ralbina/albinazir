@@ -24,6 +24,7 @@ import logoWhite from "../../assets/image/logoWhite.PNG";
 import logo12 from "../../assets/image/logo1-2.PNG";
 import logopink from "../../assets/image/logoPink.PNG";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import LiveSearch from "../Livesearch/Livesearch";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -98,7 +99,9 @@ export default function PrimarySearchAppBar() {
       onClose={handleMenuClose}
     >
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <NavLink to="/Login">
+        <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      </NavLink>
     </Menu>
   );
   const mobileMenuId = "primary-search-account-menu-mobile";
@@ -138,7 +141,6 @@ export default function PrimarySearchAppBar() {
             </Badge>
           </NavLink>
         </IconButton>
-
         <p>Cart</p>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
@@ -167,15 +169,7 @@ export default function PrimarySearchAppBar() {
             height="90"
             className="logo"
           />{" "}
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ "aria-label": "search" }}
-            />
-          </Search>
+          <LiveSearch />
           <NavLink className="nav-link" to="/">
             <Button variant="contained">Home</Button>
           </NavLink>
