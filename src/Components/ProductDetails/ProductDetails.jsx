@@ -14,9 +14,8 @@ import Alert from "@mui/material/Alert";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import TrendingDownIcon from "@mui/icons-material/TrendingDown";
 import Paper from "@mui/material/Paper";
-// import "./Products.css";
 import "swiper/css";
-import Carousel from "../Carousel/Carousel";
+// import Carousel from "../Carousel/Carousel";
 
 import SwiperCore, { Thumbs } from "swiper";
 
@@ -153,6 +152,7 @@ const ProductDetails = () => {
                 {productDetails.price} с.
               </Typography>
             </Box>
+
             <Button
               variant="contained"
               color="success"
@@ -162,6 +162,7 @@ const ProductDetails = () => {
             >
               Добавить в корзину
             </Button>
+
             <NavLink to={`/edit/${productDetails.id}`}>
               <Button>Edit</Button>
             </NavLink>
@@ -176,29 +177,6 @@ const ProductDetails = () => {
         </Grid>
       </Container>
     </section>
-
-    // <div>
-    //   <img src={productDetails.img1} alt={productDetails.title} width={350} />
-    //   <h2>{productDetails.title}</h2>
-    //   <h5>{productDetails.type}</h5>
-    //   <h5>{productDetails.description}</h5>
-    //   <h5>{productDetails.price}</h5>
-
-    //   {/* <NavLink to={`/edit/${id}`}>
-    //     <button className="btnCrud" id="edit">
-    //       edit
-    //     </button>
-    //   </NavLink> */}
-    //   <NavLink to={`/list`}>
-    //     <button className="btnCrud" id="del" onClick={() => deleteProduct(id)}>
-    //       delete
-    //     </button>
-    //   </NavLink>
-
-    //   <NavLink to={`/edit/${productDetails.id}`}>
-    //     <button>edit</button>
-    //   </NavLink>
-    // </div>
   );
 };
 

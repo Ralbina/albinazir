@@ -1,6 +1,8 @@
+import { Button, TextField } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import { NavLink, useNavigate, useParams } from "react-router-dom";
 import { productContext } from "../../../Context/ProductContext";
+import "./EditProduct.css";
 
 const EditProduct = () => {
   const { id } = useParams();
@@ -38,40 +40,102 @@ const EditProduct = () => {
     navigate("/list");
   };
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="Название"
-        value={editTitle}
-        onChange={(e) => setEditTitle(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Тип"
-        value={editType}
-        onChange={(e) => setEditType(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Описание"
-        value={editDescription}
-        onChange={(e) => setEditDescription(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Цена"
-        value={editPrice}
-        onChange={(e) => setEditPrice(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Фото"
-        value={editImg1}
-        onChange={(e) => setEditImg1(e.target.value)}
-      />
-      <NavLink to="/list">
-        <button onClick={handleChange}>Save product</button>
-      </NavLink>
+    <div className="fon">
+      <div className="add">
+        <TextField
+          id="outlined-basic"
+          label="Название"
+          variant="outlined"
+          value={editTitle}
+          name="title"
+          onChange={(e) => setEditTitle(e.target.value)}
+          className="inp
+          "
+        />
+
+        {/* <input
+          type="text"
+          placeholder="Название"
+          value={editTitle}
+          onChange={(e) => setEditTitle(e.target.value)}
+        /> */}
+
+        <TextField
+          id="outlined-basic"
+          label="Тип"
+          variant="outlined"
+          value={editType}
+          name="type"
+          onChange={(e) => setEditType(e.target.value)}
+          className="inp
+          "
+        />
+
+        {/* <input
+          type="text"
+          placeholder="Тип"
+          value={editType}
+          onChange={(e) => setEditType(e.target.value)}
+        /> */}
+
+        <TextField
+          id="outlined-basic"
+          label="Описание"
+          variant="outlined"
+          value={editDescription}
+          name="title"
+          onChange={(e) => setEditDescription(e.target.value)}
+          className="inp
+          "
+        />
+
+        {/* <input
+          type="text"
+          placeholder="Описание"
+          value={editDescription}
+          onChange={(e) => setEditDescription(e.target.value)}
+        /> */}
+
+        <TextField
+          id="outlined-basic"
+          label="Цена"
+          variant="outlined"
+          value={editPrice}
+          name="price"
+          onChange={(e) => setEditPrice(e.target.value)}
+          className="inp
+          "
+        />
+        {/* <input
+          type="text"
+          placeholder="Цена"
+          value={editPrice}
+          onChange={(e) => setEditPrice(e.target.value)}
+        /> */}
+
+        <TextField
+          id="outlined-basic"
+          label="Фото"
+          variant="outlined"
+          value={editImg1}
+          name="img1"
+          onChange={(e) => setEditImg1(e.target.value)}
+          className="inp
+          "
+        />
+
+        {/* <input
+          type="text"
+          placeholder="Фото"
+          value={editImg1}
+          onChange={(e) => setEditImg1(e.target.value)}
+        /> */}
+        <NavLink to="/list">
+          <Button className="btn5" variant="contained" onClick={handleChange}>
+            Save product
+          </Button>
+        </NavLink>
+      </div>
     </div>
   );
 };
