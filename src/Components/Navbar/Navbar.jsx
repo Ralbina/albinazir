@@ -25,6 +25,10 @@ import logo12 from "../../assets/image/logo1-2.PNG";
 import logopink from "../../assets/image/logoPink.PNG";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LiveSearch from "../Livesearch/Livesearch";
+import { AdminPanelSettings } from "@mui/icons-material";
+import { AdminPanelSettingsIcon } from "@mui/icons-material/AdminPanelSettings";
+import { PersonIcon } from "@mui/icons-material/Person";
+import { cartContext } from "../../Context/CartContext";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -64,6 +68,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 export default function PrimarySearchAppBar() {
+  const { cartLenght } = React.useContext(cartContext);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
   const isMenuOpen = Boolean(anchorEl);
@@ -136,13 +141,35 @@ export default function PrimarySearchAppBar() {
           color="inherit"
         >
           <NavLink to="/cart">
-            <Badge color="error">
+            <Badge badgeContent={cartLenght} color="error">
               <ShoppingCartIcon />
             </Badge>
           </NavLink>
         </IconButton>
         <p>Cart</p>
       </MenuItem>
+      //! логика для add product for admin
+      {/* <NavLink to="/admin">
+        <MenuItem>
+          <IconButton
+            size="large"
+            aria-label="account of current user"
+            aria-controls="primary-search-account-menu"
+            aria-haspopup="true"
+            color="inherit"
+          >
+            {user?.isAdmin ? (
+              <AdminPanelSettingsIcon />
+            ) : user?.isLogged ? (
+              <PersonIcon />
+            ) : (
+              <AccountCircle />
+            )}
+            <AccountCircle />
+          </IconButton>
+          <p>Admin</p>
+        </MenuItem>
+      </NavLink> */}
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           size="large"
@@ -155,6 +182,9 @@ export default function PrimarySearchAppBar() {
         </IconButton>
         <p>Profile</p>
       </MenuItem>
+      <MenuItem onClick={handleProfileMenuOpen}>
+        <p>About</p>
+      </MenuItem>
     </Menu>
   );
   return (
@@ -165,8 +195,8 @@ export default function PrimarySearchAppBar() {
             id="iceWhite"
             alt=""
             src={logopink}
-            width="80"
-            height="90"
+            width="8%"
+            height="10%"
             className="logo"
           />{" "}
           <LiveSearch />
@@ -199,7 +229,7 @@ export default function PrimarySearchAppBar() {
               color="inherit"
             >
               <NavLink to="/cart">
-                <Badge badgeContent={7} color="secondary">
+                <Badge badgeContent={cartLenght} color="secondary">
                   <ShoppingCartIcon />
                 </Badge>
               </NavLink>

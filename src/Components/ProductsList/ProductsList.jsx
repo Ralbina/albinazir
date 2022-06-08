@@ -11,18 +11,19 @@ import RestoreFromTrashIcon from "@mui/icons-material/RestoreFromTrash";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { cartContext } from "../../Context/CartContext";
 
-const ProductsList = () => {
-  const { getProducts, products, deleteProduct } = useContext(productContext);
-  const { addProductToCart } = useContext(cartContext);
-  useEffect(() => {
-    getProducts();
-  }, []);
 import ReactPaginate from "react-paginate";
 import "./ProductList.css";
 import Filter from "../Filter/Filter";
+// const ProductsList = () => {
+//   const { getProducts, products, deleteProduct } = useContext(productContext);
+//   const { addProductToCart } = useContext(cartContext);
+// useEffect(() => {
+//   getProducts();
+// }, []);
 // let page = 1;
 const ProductsList = () => {
   const { getProducts, products, deleteProduct } = useContext(productContext);
+  const { addProductToCart } = useContext(cartContext);
   const [searchParams, setSearchParams] = useSearchParams();
 
   const [type, setType] = useState(searchParams.get("type") || "all");
@@ -55,10 +56,7 @@ const ProductsList = () => {
       setSearchParams(paramsWithType());
     }
   }, [type, searchParams]);
-  // useEffect(() => {
-  //   getProducts();
-  // }, []);
-  // console.log(products);
+
   // ! Paginate
   const [pageNumber, setPageNumber] = useState(0);
   const productsLimit = 6;
@@ -148,11 +146,11 @@ const ProductsList = () => {
                     </Button>
                   </NavLink>
 
-              <Button onClick={(e) => addProductToCart(item)}>
-                <AddShoppingCartIcon />
-              </Button>
-            </CardActions>
-          </Card>
+                  <Button onClick={() => addProductToCart(item)}>
+                    <AddShoppingCartIcon />
+                  </Button>
+                </CardActions>
+              </Card>
 
               // <div key={item.id}>
               //   <img src={item.img1} alt={item.title} width={100} />
