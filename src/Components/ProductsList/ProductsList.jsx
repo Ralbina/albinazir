@@ -9,13 +9,14 @@ import { Button, CardActionArea, CardActions } from "@mui/material";
 import RestoreFromTrashIcon from "@mui/icons-material/RestoreFromTrash";
 
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import { cartContext } from "../../Context/CartContext";
 
 const ProductsList = () => {
   const { getProducts, products, deleteProduct } = useContext(productContext);
+  const { addProductToCart } = useContext(cartContext);
   useEffect(() => {
     getProducts();
   }, []);
-  console.log(products);
 
   return (
     <div>
@@ -91,8 +92,7 @@ const ProductsList = () => {
                 </Button>
               </NavLink>
 
-              <Button>
-                {/* onClick={(e) => addProductToCart(item)} */}
+              <Button onClick={(e) => addProductToCart(item)}>
                 <AddShoppingCartIcon />
               </Button>
             </CardActions>

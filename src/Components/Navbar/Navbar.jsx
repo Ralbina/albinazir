@@ -23,6 +23,7 @@ import logoup from "../../assets/image/logoup.PNG";
 import logoWhite from "../../assets/image/logoWhite.PNG";
 import logo12 from "../../assets/image/logo1-2.PNG";
 import logopink from "../../assets/image/logoPink.PNG";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -131,12 +132,14 @@ export default function PrimarySearchAppBar() {
           aria-label="show 17 new notifications"
           color="inherit"
         >
-          <Badge badgeContent={17} color="error">
-            <NotificationsIcon />
-          </Badge>
+          <NavLink to="/cart">
+            <Badge color="error">
+              <ShoppingCartIcon />
+            </Badge>
+          </NavLink>
         </IconButton>
 
-        <p>Notifications</p>
+        <p>Cart</p>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
@@ -174,13 +177,13 @@ export default function PrimarySearchAppBar() {
             />
           </Search>
           <NavLink className="nav-link" to="/">
-            Home
+            <Button variant="contained">Home</Button>
           </NavLink>
-          <NavLink className="nav-link" to="/products">
-            Products
+          <NavLink className="nav-link" to="/list">
+            <Button variant="contained">Products</Button>
           </NavLink>
           <NavLink className="nav-link" to="/add">
-            Add Produts
+            <Button variant="contained">Add Produts</Button>
           </NavLink>
           <Button variant="contained" className="btn">
             About
@@ -201,9 +204,11 @@ export default function PrimarySearchAppBar() {
               aria-label="show 17 new notifications"
               color="inherit"
             >
-              <Badge badgeContent={17} color="secondary">
-                <NotificationsIcon />
-              </Badge>
+              <NavLink to="/cart">
+                <Badge badgeContent={7} color="secondary">
+                  <ShoppingCartIcon />
+                </Badge>
+              </NavLink>
             </IconButton>
             <IconButton
               size="large"

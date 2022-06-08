@@ -2,9 +2,9 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import AddProduct from "./Components/Admin/AddProduct/AddProduct";
 import ProductDetails from "./Components/ProductDetails/ProductDetails";
-import ProductsList from "./Components/ProductsList/ProductsList";
 import EditProduct from "./Components/Admin/EditProduct/EditProduct";
 import Home from "./Components/Home/Home";
+import ProductsList from "./Components/ProductsList/ProductsList";
 import Cart from "./Components/Cart/Cart";
 
 const MainRoutes = () => {
