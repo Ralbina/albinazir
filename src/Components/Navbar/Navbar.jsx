@@ -28,6 +28,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 
 import { cartContext } from "../../Context/CartContext";
 import { favoriteContext } from "../../Context/FavoriteContext";
+import { authContext } from "../../Context/AuthContext";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -69,6 +70,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export default function PrimarySearchAppBar() {
   const { favoriteLenght } = React.useContext(favoriteContext);
   const { cartLenght } = React.useContext(cartContext);
+  const { user, handleLogOut } = React.useContext(authContext);
+
+  // const { user } = React.useContext(AuthContext);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
   const isMenuOpen = Boolean(anchorEl);
@@ -85,6 +89,10 @@ export default function PrimarySearchAppBar() {
   };
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
+  };
+  const logout = () => {
+    handleLogOut();
+    handleMenuClose();
   };
   const menuId = "primary-search-account-menu";
   const renderMenu = (
@@ -103,7 +111,11 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+      <MenuItem onClick={handleMenuClose}>{user.email}</MenuItem>
+      {user.email === undefined ? null : (
+        <MenuItem onClick={logout}>Log out</MenuItem>
+      )}
+
       <NavLink to="/Login">
         <MenuItem onClick={handleMenuClose}>My account</MenuItem>
       </NavLink>
@@ -190,9 +202,11 @@ export default function PrimarySearchAppBar() {
           <NavLink className="nav-link" to="/list">
             <Button variant="contained">Products</Button>
           </NavLink>
-          <NavLink className="nav-link" to="/add">
-            <Button variant="contained">Add Produts</Button>
-          </NavLink>
+          {user.email === "admin@gmail.com" ? (
+            <NavLink className="nav-link" to="/add">
+              <Button variant="contained">Add Produts</Button>
+            </NavLink>
+          ) : null}
           <Button variant="contained" className="btn">
             About
           </Button>

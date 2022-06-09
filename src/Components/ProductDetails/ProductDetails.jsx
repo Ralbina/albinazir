@@ -163,9 +163,6 @@ const ProductDetails = () => {
               Добавить в корзину
             </Button>
 
-            <NavLink to={`/edit/${productDetails.id}`}>
-              <Button>Edit</Button>
-            </NavLink>
             <Alert
               severity="info"
               variant="outlined"

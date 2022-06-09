@@ -8,6 +8,7 @@ import ProductsList from "./Components/ProductsList/ProductsList";
 import Cart from "./Components/Cart/Cart";
 import Login from "./Components/Auth/Login";
 import Favorite from "./Components/Favorite/Favorite";
+import PaymentCard from "./Components/Payment/Payment";
 
 const MainRoutes = () => {
   return (
@@ -20,6 +21,7 @@ const MainRoutes = () => {
       <Route path="/cart" element={<Cart />} />
       <Route path="/login" element={<Login />} />
       <Route path="/favorite" element={<Favorite />} />
+      <Route path="/payment" element={<PaymentCard />} />
     </Routes>
   );
 };
