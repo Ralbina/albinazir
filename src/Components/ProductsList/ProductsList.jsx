@@ -14,7 +14,7 @@ import { cartContext } from "../../Context/CartContext";
 import ReactPaginate from "react-paginate";
 import "./ProductList.css";
 import Filter from "../Filter/Filter";
-import AuthContextProvider, { authContext } from "../../Context/AuthContext";
+import { authContext } from "../../Context/AuthContext";
 // const ProductsList = () => {
 //   const { getProducts, products, deleteProduct } = useContext(productContext);
 //   const { addProductToCart } = useContext(cartContext);
