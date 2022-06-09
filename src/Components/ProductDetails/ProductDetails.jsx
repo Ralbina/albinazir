@@ -15,9 +15,10 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import TrendingDownIcon from "@mui/icons-material/TrendingDown";
 import Paper from "@mui/material/Paper";
 import "swiper/css";
-// import Carousel from "../Carousel/Carousel";
 
 import SwiperCore, { Thumbs } from "swiper";
+import { cartContext } from "../../Context/CartContext";
+import { authContext } from "../../Context/AuthContext";
 
 SwiperCore.use([Thumbs]);
 
@@ -27,8 +28,9 @@ const ProductDetails = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const { id } = useParams();
 
-  const { getProductDetails, productDetails, deleteProduct } =
-    useContext(productContext);
+  const { getProductDetails, productDetails } = useContext(productContext);
+  const { user } = useContext(authContext);
+  const { addProductToCart } = useContext(cartContext);
 
   useEffect(() => {
     getProductDetails(id);
@@ -154,6 +156,7 @@ const ProductDetails = () => {
             </Box>
 
             <Button
+              onClick={() => addProductToCart(productDetails)}
               variant="contained"
               color="success"
               startIcon={<AddShoppingCartIcon />}
@@ -170,6 +173,13 @@ const ProductDetails = () => {
             >
               Телефон: +996558600104
             </Alert>
+            {user.email === "admin@gmail.com" ? (
+              <div>
+                <NavLink to={`/edit/${productDetails.id}`}>
+                  <Button>Edit</Button>
+                </NavLink>
+              </div>
+            ) : null}
           </Grid>
         </Grid>
       </Container>

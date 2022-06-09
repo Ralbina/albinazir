@@ -108,11 +108,6 @@ const ProductsList = () => {
                   <Typography gutterBottom variant="h5" component="div">
                     {item.title}
                   </Typography>
-
-                  {/* <Typography variant="body2" color="text.secondary" height="25px">
-                {item.description}
-              </Typography> */}
-
                   <Typography
                     sx={{
                       fontWeight: "bold",
@@ -148,9 +143,6 @@ const ProductsList = () => {
                         delete
                         <RestoreFromTrashIcon />
                       </Button>
-                      <NavLink to={`/edit/${productDetails.id}`}>
-                        <Button>Edit</Button>
-                      </NavLink>
                     </div>
                   ) : null}
 
@@ -171,14 +163,6 @@ const ProductsList = () => {
                   </Button>
                 </CardActions>
               </Card>
-
-              // <div key={item.id}>
-              //   <img src={item.img1} alt={item.title} width={100} />
-              //   <h2>{item.title}</h2>
-              //   <NavLink to={`/details/${item.id}`}>
-              //     <button>Просмотреть</button>
-              //   </NavLink>
-              // </div>
             ))
           : null}
         <ReactPaginate

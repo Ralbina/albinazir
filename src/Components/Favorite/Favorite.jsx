@@ -16,9 +16,12 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { ExpandMore } from "@mui/icons-material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import { cartContext } from "../../Context/CartContext";
 const Favorite = () => {
   const { favorite, getFavorite, deleteFavoriteProduct } =
     useContext(favoriteContext);
+  const { addProductToCart } = useContext(cartContext);
   useEffect(() => {
     getFavorite();
   }, []);
@@ -53,9 +56,9 @@ const Favorite = () => {
                 </Typography>
               </CardContent>
               <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites">
-                  <FavoriteIcon />
-                </IconButton>
+                <Button onClick={() => addProductToCart(elem.item)}>
+                  <AddShoppingCartIcon />
+                </Button>
                 <Button
                   onClick={() => deleteFavoriteProduct(elem.item.id)}
                   variant="contained"
