@@ -7,6 +7,8 @@ import ProductContext from "./Context/ProductContext";
 import MainRoutes from "./MainRoutes";
 import "./App.css";
 import AuthContextProvider from "./Context/AuthContext";
+import Footer from "./Components/Footer/Footer";
+import PaymentCard from "./Components/Payment/Payment";
 function App() {
   return (
     <BrowserRouter>
@@ -15,6 +17,7 @@ function App() {
           <ProductContext>
             <PrimarySearchAppBar />
             <MainRoutes />
+            <Footer />
           </ProductContext>
         </CartContextProvider>
       </AuthContextProvider>

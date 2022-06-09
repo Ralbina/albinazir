@@ -10,10 +10,11 @@
   width: 100%;
 }
 #line {
-  width: 100px;
+  width: 20%;
   height: 5px;
   border-radius: 10px;
 }
+
 .container2 {
   text-align: center;
   padding: 100px 300px 100px 300px;
@@ -131,7 +132,7 @@
   padding-left: 300px;
   width: 200px;
 }
-footer {
+/* footer {
   display: flex;
   justify-content: space-evenly;
   background: rgb(242, 121, 190) !important;
@@ -144,7 +145,7 @@ footer {
 }
 #logoFooter {
   width: 200px;
-}
+} */
 video {
   width: 800px;
   border-radius: 400px;
