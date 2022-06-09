@@ -14,6 +14,7 @@ import { cartContext } from "../../Context/CartContext";
 import ReactPaginate from "react-paginate";
 import "./ProductList.css";
 import Filter from "../Filter/Filter";
+import AuthContextProvider, { authContext } from "../../Context/AuthContext";
 // const ProductsList = () => {
 //   const { getProducts, products, deleteProduct } = useContext(productContext);
 //   const { addProductToCart } = useContext(cartContext);
@@ -22,9 +23,12 @@ import Filter from "../Filter/Filter";
 // }, []);
 // let page = 1;
 const ProductsList = () => {
-  const { getProducts, products, deleteProduct } = useContext(productContext);
+  const { getProducts, products, deleteProduct, productDetails } =
+    useContext(productContext);
+
   const { addProductToCart } = useContext(cartContext);
   const [searchParams, setSearchParams] = useSearchParams();
+  const { user } = useContext(authContext);
 
   const [type, setType] = useState(searchParams.get("type") || "all");
   const paramsWithType = () => {
@@ -128,18 +132,26 @@ const ProductsList = () => {
                   {/* <Button className="btn1" size="small" variant="outlined">
               Edit
             </Button> */}
-                  <Button
-                    onClick={() => deleteProduct(item.id)}
-                    sx={{
-                      marginRight: "20px",
-                    }}
-                    className="btn"
-                    size="small"
-                    variant="outlined"
-                  >
-                    delete
-                    <RestoreFromTrashIcon />
-                  </Button>
+                  {user.email === "admin@gmail.com" ? (
+                    <div>
+                      <Button
+                        onClick={() => deleteProduct(item.id)}
+                        sx={{
+                          marginRight: "20px",
+                        }}
+                        className="btn"
+                        size="small"
+                        variant="outlined"
+                      >
+                        delete
+                        <RestoreFromTrashIcon />
+                      </Button>
+                      <NavLink to={`/edit/${productDetails.id}`}>
+                        <Button>Edit</Button>
+                      </NavLink>
+                    </div>
+                  ) : null}
+
                   <NavLink to={`/details/${item.id}`}>
                     <Button className="btn" size="small" variant="outlined">
                       Preview

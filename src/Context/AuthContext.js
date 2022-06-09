@@ -18,9 +18,8 @@ const AuthContextProvider = ({ children }) => {
   };
   const handleSignUp = () => {
     clearError();
-    fire
-      .auth()
-      .createUserWithEmailAndPassword(email, password)
+    fire.auth().createUserWithEmailAndPassword(email, password);
+    setUser(user)
       //    отлавливаем ошибки
       .catch((error) => {
         switch (error.code) {
@@ -38,25 +37,25 @@ const AuthContextProvider = ({ children }) => {
   };
   //   ф-я для логина
   const handleLogin = () => {
-    clearError();
-    fire
-      .auth()
-      .signInWithEmailAndPassword(email, password)
-      .catch((error) => {
-        switch (error.code) {
-          case "auth/invalid-email":
-          case "auth/user-not-found":
-          case "auth/user-disable":
-            setEmailError(error.message);
-            break;
-          case "auth/wrong-password":
-            setPasswordError(error.message);
-            break;
-          default:
-            setEmailError(error.message);
-            setPasswordError(error.message);
-        }
-      });
+    try {
+      clearError();
+      fire.auth().signInWithEmailAndPassword(email, password);
+      setUser(user);
+    } catch (error) {
+      switch (error.code) {
+        case "auth/invalid-email":
+        case "auth/user-not-found":
+        case "auth/user-disable":
+          setEmailError(error.message);
+          break;
+        case "auth/wrong-password":
+          setPasswordError(error.message);
+          break;
+        default:
+          setEmailError(error.message);
+          setPasswordError(error.message);
+      }
+    }
   };
   //   сделать кнопку  выйти с аккаунта и должна направить в /login
   const handleLogOut = () => {
@@ -77,6 +76,7 @@ const AuthContextProvider = ({ children }) => {
   useEffect(() => {
     authListener();
   }, []);
+  console.log(user.email);
   return (
     <authContext.Provider
       value={{

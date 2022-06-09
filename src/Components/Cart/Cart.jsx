@@ -14,6 +14,7 @@ import React, { useContext, useEffect } from "react";
 import { cartContext } from "../../Context/CartContext";
 import "./Cart.css";
 import Input from "@mui/material/Input";
+import { NavLink } from "react-router-dom";
 
 const Cart = () => {
   const { cart, getCart, deleteCartProduct, changeProductCount } =
@@ -84,7 +85,9 @@ const Cart = () => {
         <h2>Loading...</h2>
       )}
       <h4>Общая сумма: {cart.totalPrice}</h4>
-      <Button variant="contained">Оформить заказ</Button>
+      <NavLink to="/payment">
+        <Button variant="contained">Оформить заказ</Button>
+      </NavLink>
     </div>
   );
 };

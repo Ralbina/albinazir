@@ -26,7 +26,7 @@ const Home = () => {
       </div>
       <div className="container2">
         <div>
-          <h1 id="h1">
+          <h1 className="h1">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
             dolor!
           </h1>
@@ -61,7 +61,7 @@ const Home = () => {
       </div>
       <div className="container4">
         <div className="text2">
-          <h1 id="h1">A Little Bit of History</h1>
+          <h1 className="h1">A Little Bit of History</h1>
           <img id="line" src={line} alt="BG2" />
 
           <h2>
@@ -84,10 +84,7 @@ const Home = () => {
       <div id="container3">
         <img id="img1" src={img1} alt="img1" />
         <div id="text">
-          <h2>
-            1Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
-            voluptatem.
-          </h2>
+          <h1 className="h1">A Little Bit of History</h1>
           <img id="line" src={line} alt="BG2" />
           <h2>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
@@ -105,10 +102,7 @@ const Home = () => {
       </div>
       <div id="girl1">
         <div className="text5_5">
-          <h2>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi,
-            possimus.
-          </h2>
+          <h1 className="h1">A Little Bit of History</h1>
           <h3>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
             blanditiis qui omnis dolor molestias ducimus cumque. Labore
@@ -120,7 +114,7 @@ const Home = () => {
 
       <div className="container5">
         <div className="text5">
-          <h1 id="h1">Keepin’ It Local</h1>
+          <h1 className="h1">Keepin’ It Local</h1>
           <img id="line" src={line} alt="BG2" />
 
           <h2>
@@ -161,38 +155,6 @@ const Home = () => {
           <source src={video} type="video/mp4" className="video1" />
         </video>
       </div>
-
-      <footer>
-        <div className="textfooter">
-          <h2>More Ways to BR</h2>
-          <img id="line" src={line} alt="BG2" />
-          <h4>Merchandise </h4>
-          <h4>Mobile App </h4>
-          <h4>Gift Cards </h4>
-        </div>
-        <div>
-          <h2>Join The Team</h2>
-          <img id="line" src={line} alt="BG2" />
-          <h4>Careers </h4>
-          <h4>Franchising </h4>
-          <h4>Contact Us </h4>
-        </div>
-        <div>
-          <h2>Company Info</h2>
-          <img id="line" src={line} alt="BG2" />
-          <h4>Our Story </h4>
-          <h4>FAQs </h4>
-          <h4>Pressroom</h4>
-          <h4>Sustainability</h4>
-          <h4>Pressroom</h4>
-        </div>
-        <div>
-          <img id="logoFooter" src={logo1} />
-          <h2>Even sweeter on IOS & Android</h2>
-          <h4>Get details,order cakes, send gift andmore </h4>
-          <h3>Get the scoop </h3>
-        </div>
-      </footer>
     </>
   );
 };
