@@ -78,6 +78,10 @@ const FavoriteContextProvider = ({ children }) => {
     );
     localStorage.setItem("favorite", JSON.stringify(favorite));
     getFavorite();
+    dispatch({
+      type: "CHANGE_FAVORITE_COUNT",
+      payload: favorite.favoriteProducts.length,
+    });
   };
 
   function changeFavoriteCount(id, count) {

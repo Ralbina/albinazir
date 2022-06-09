@@ -25,35 +25,11 @@
       "id": 10
     },
     {
-      "title": "scdfwafera",
-      "type": "sdac",
-      "description": "fvjhgv",
-      "price": "hgcvhvhj",
-      "img1": "hgvhvhj",
-      "id": 11
-    },
-    {
-      "title": "2222",
-      "type": "2222",
-      "description": "2222",
-      "price": "222",
-      "img1": "2222",
-      "id": 12
-    },
-    {
-      "title": "hjhjbhjb`hjbh`jbb",
-      "type": "b",
-      "description": "hjb",
-      "price": "hjb",
-      "img1": "jhb",
-      "id": 13
-    },
-    {
-      "title": "bjbhjbhj",
-      "type": "bhj",
-      "description": "bhjbhjbhj",
-      "price": "bhjbhjbhj",
-      "img1": "bhjbhjbjh",
+      "title": "222222",
+      "type": "22222",
+      "description": "22222",
+      "price": "2222",
+      "img1": "22",
       "id": 14
     },
     {
@@ -63,14 +39,6 @@
       "price": "jbjbjbjb",
       "img1": "jbjkbjkbjk",
       "id": 15
-    },
-    {
-      "title": "bjbhbbkj",
-      "type": "bjkbjkbjb",
-      "description": "bbjbjkbjbkj",
-      "price": "bjbjkbjkbjkb",
-      "img1": "kjbjkbkjbjkbjkbkj",
-      "id": 16
     },
     {
       "title": "bjkjbjkbj",
@@ -159,6 +127,14 @@
       "price": "fwfwffw",
       "img1": "fwfwfwfwfw",
       "id": 27
+    },
+    {
+      "title": "bbbbbbbb",
+      "type": "bbbbbbbbbb",
+      "description": "bbbbbbb",
+      "price": "bbbbbb",
+      "img1": "bbbb",
+      "id": 28
     }
   ]
 }
