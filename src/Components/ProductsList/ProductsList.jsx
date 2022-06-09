@@ -5,15 +5,16 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions } from "@mui/material";
+import { Button, CardActionArea, CardActions, IconButton } from "@mui/material";
 import RestoreFromTrashIcon from "@mui/icons-material/RestoreFromTrash";
-
+import FavoriteIcon from "@mui/icons-material/Favorite";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { cartContext } from "../../Context/CartContext";
 
 import ReactPaginate from "react-paginate";
 import "./ProductList.css";
 import Filter from "../Filter/Filter";
+import { favoriteContext } from "../../Context/FavoriteContext";
 // const ProductsList = () => {
 //   const { getProducts, products, deleteProduct } = useContext(productContext);
 //   const { addProductToCart } = useContext(cartContext);
@@ -24,6 +25,7 @@ import Filter from "../Filter/Filter";
 const ProductsList = () => {
   const { getProducts, products, deleteProduct } = useContext(productContext);
   const { addProductToCart } = useContext(cartContext);
+  const { addProductToFavorite } = useContext(favoriteContext);
   const [searchParams, setSearchParams] = useSearchParams();
 
   const [type, setType] = useState(searchParams.get("type") || "all");
@@ -145,6 +147,12 @@ const ProductsList = () => {
                       Preview
                     </Button>
                   </NavLink>
+                  <Button
+                    onClick={() => addProductToFavorite(item)}
+                    aria-label="add to favorites"
+                  >
+                    <FavoriteIcon />
+                  </Button>
 
                   <Button onClick={() => addProductToCart(item)}>
                     <AddShoppingCartIcon />

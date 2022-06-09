@@ -7,15 +7,18 @@ import ProductContext from "./Context/ProductContext";
 import MainRoutes from "./MainRoutes";
 import "./App.css";
 import AuthContextProvider from "./Context/AuthContext";
+import FavoriteContextProvider from "./Context/FavoriteContext";
 function App() {
   return (
     <BrowserRouter>
       <AuthContextProvider>
         <CartContextProvider>
-          <ProductContext>
-            <PrimarySearchAppBar />
-            <MainRoutes />
-          </ProductContext>
+          <FavoriteContextProvider>
+            <ProductContext>
+              <PrimarySearchAppBar />
+              <MainRoutes />
+            </ProductContext>
+          </FavoriteContextProvider>
         </CartContextProvider>
       </AuthContextProvider>
     </BrowserRouter>

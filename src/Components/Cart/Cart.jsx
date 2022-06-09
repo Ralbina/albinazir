@@ -61,6 +61,11 @@ const Cart = () => {
                         onChange={(e) =>
                           changeProductCount(elem.item.id, e.target.value)
                         }
+                        onClick={() => {
+                          +elem.count > 0
+                            ? changeProductCount(elem.count - 1, elem.item.id)
+                            : deleteCartProduct(elem.item.id);
+                        }}
                         value={elem.count}
                         id="outlined-number"
                         label="Number"
