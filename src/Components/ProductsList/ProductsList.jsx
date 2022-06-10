@@ -5,16 +5,17 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions } from "@mui/material";
+import { Button, CardActionArea, CardActions, IconButton } from "@mui/material";
 import RestoreFromTrashIcon from "@mui/icons-material/RestoreFromTrash";
-
+import FavoriteIcon from "@mui/icons-material/Favorite";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { cartContext } from "../../Context/CartContext";
 
 import ReactPaginate from "react-paginate";
 import "./ProductList.css";
 import Filter from "../Filter/Filter";
-import { authContext } from "../../Context/AuthContext";
+import { favoriteContext } from "../../Context/FavoriteContext";
+import AuthContextProvider, { authContext } from "../../Context/AuthContext";
 // const ProductsList = () => {
 //   const { getProducts, products, deleteProduct } = useContext(productContext);
 //   const { addProductToCart } = useContext(cartContext);
@@ -27,6 +28,7 @@ const ProductsList = () => {
     useContext(productContext);
 
   const { addProductToCart } = useContext(cartContext);
+  const { addProductToFavorite } = useContext(favoriteContext);
   const [searchParams, setSearchParams] = useSearchParams();
   const { user } = useContext(authContext);
 
@@ -106,11 +108,6 @@ const ProductsList = () => {
                   <Typography gutterBottom variant="h5" component="div">
                     {item.title}
                   </Typography>
-
-                  {/* <Typography variant="body2" color="text.secondary" height="25px">
-                {item.description}
-              </Typography> */}
-
                   <Typography
                     sx={{
                       fontWeight: "bold",
@@ -146,9 +143,6 @@ const ProductsList = () => {
                         delete
                         <RestoreFromTrashIcon />
                       </Button>
-                      <NavLink to={`/edit/${productDetails.id}`}>
-                        <Button>Edit</Button>
-                      </NavLink>
                     </div>
                   ) : null}
 
@@ -157,20 +151,18 @@ const ProductsList = () => {
                       Preview
                     </Button>
                   </NavLink>
+                  <Button
+                    onClick={() => addProductToFavorite(item)}
+                    aria-label="add to favorites"
+                  >
+                    <FavoriteIcon />
+                  </Button>
 
                   <Button onClick={() => addProductToCart(item)}>
                     <AddShoppingCartIcon />
                   </Button>
                 </CardActions>
               </Card>
-
-              // <div key={item.id}>
-              //   <img src={item.img1} alt={item.title} width={100} />
-              //   <h2>{item.title}</h2>
-              //   <NavLink to={`/details/${item.id}`}>
-              //     <button>Просмотреть</button>
-              //   </NavLink>
-              // </div>
             ))
           : null}
         <ReactPaginate

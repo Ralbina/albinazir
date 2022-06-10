@@ -12,7 +12,6 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
-import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import { Button } from "@mui/material";
@@ -25,12 +24,11 @@ import logo12 from "../../assets/image/logo1-2.PNG";
 import logopink from "../../assets/image/logoPink.PNG";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LiveSearch from "../Livesearch/Livesearch";
-import { AdminPanelSettings } from "@mui/icons-material";
-import { AdminPanelSettingsIcon } from "@mui/icons-material/AdminPanelSettings";
-import { PersonIcon } from "@mui/icons-material/Person";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+
 import { cartContext } from "../../Context/CartContext";
+import { favoriteContext } from "../../Context/FavoriteContext";
 import { authContext } from "../../Context/AuthContext";
-// import { uthContext } from "../../Context/AuthContext";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -70,6 +68,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 export default function PrimarySearchAppBar() {
+  const { favoriteLenght } = React.useContext(favoriteContext);
   const { cartLenght } = React.useContext(cartContext);
   const { user, handleLogOut } = React.useContext(authContext);
 
@@ -140,12 +139,18 @@ export default function PrimarySearchAppBar() {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="error">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-        <p>Messages</p>
+        <NavLink to="/favorite">
+          <IconButton
+            size="large"
+            color="inherit" // белый цвет у иконки почта
+            aria-label="add to favorites"
+          >
+            <Badge badgeContent={favoriteLenght} color="secondary">
+              <FavoriteIcon />
+            </Badge>
+          </IconButton>
+        </NavLink>
+        <p>Favorite</p>
       </MenuItem>
       <MenuItem>
         <IconButton
@@ -161,7 +166,6 @@ export default function PrimarySearchAppBar() {
         </IconButton>
         <p>Cart</p>
       </MenuItem>
-
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           size="large"
@@ -208,15 +212,18 @@ export default function PrimarySearchAppBar() {
           </Button>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <IconButton
-              size="large"
-              aria-label="show 4 new mails"
-              color="inherit" // белый цвет у иконки почта
-            >
-              <Badge badgeContent={7} color="secondary">
-                <MailIcon />
-              </Badge>
-            </IconButton>
+            <NavLink to="/favorite">
+              <IconButton
+                size="large"
+                color="inherit" // белый цвет у иконки почта
+                aria-label="add to favorites"
+              >
+                <Badge badgeContent={favoriteLenght} color="secondary">
+                  <FavoriteIcon />
+                </Badge>
+              </IconButton>
+            </NavLink>
+
             <IconButton
               size="large"
               aria-label="show 17 new notifications"
