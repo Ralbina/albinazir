@@ -18,9 +18,10 @@ import { NavLink } from "react-router-dom";
 
 const PaymentCard = () => {
   return (
-    <div>
+    <div className="payment">
       <Card sx={{ maxWidth: 345 }}>
         <CardHeader
+          className="cardheader"
           avatar={<Avatar aria-label="recipe">R</Avatar>}
           action={
             <IconButton aria-label="settings">
@@ -36,8 +37,8 @@ const PaymentCard = () => {
           image={newCredit}
           alt="newCredit-card"
         />
-        <CardContent>
-          <div>
+        <CardContent className="cardContent">
+          <div id="inp">
             <TextField
               className="cardInp"
               label="Card's number"
@@ -47,8 +48,7 @@ const PaymentCard = () => {
             />
             <TextField
               className="cardInp"
-              label="
-Сard expiry date"
+              label="Сard expiry date"
               color="secondary"
               focused
               placeholder="mm/YY"
@@ -67,13 +67,15 @@ const PaymentCard = () => {
               focused
               placeholder="Lastname, Name"
             />
+            <CardActions disableSpacing>
+              <NavLink to="/confirmPay">
+                <Button className="btn" variant="contained">
+                  Accept
+                </Button>
+              </NavLink>
+            </CardActions>
           </div>
         </CardContent>
-        <CardActions disableSpacing>
-          <NavLink to="/confirmPay">
-            <Button variant="contained">Подтвердить</Button>
-          </NavLink>
-        </CardActions>
       </Card>
     </div>
   );

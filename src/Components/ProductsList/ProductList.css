@@ -14,10 +14,9 @@
 }
 
 .filter {
-  box-sizing: border-box;
-  background-color: #cfcfcf98;
-  width: 20%;
-  height: 400px;
+  background-color: #cb3589;
+  width: 200px;
+  height: 300px;
   margin-top: 50px;
   padding: 20px;
   margin-left: 20px;
@@ -51,4 +50,8 @@
 .paginationActive a {
   color: white;
   background-color: rgba(0, 145, 212, 0.904);
+}
+#filter1 {
+  display: flex;
+  flex-wrap: wrap;
 }

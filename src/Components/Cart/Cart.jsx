@@ -75,6 +75,7 @@ const Cart = () => {
                     </TableCell>
                     <TableCell align="right">{elem.subPrice}</TableCell>
                     <Button
+                      className="btn"
                       onClick={() => deleteCartProduct(elem.item.id)}
                       variant="contained"
                     >
@@ -89,10 +90,14 @@ const Cart = () => {
       ) : (
         <h2>Loading...</h2>
       )}
-      <h4>Общая сумма: {cart.totalPrice}</h4>
-      <NavLink to="/payment">
-        <Button variant="contained">Оформить заказ</Button>
-      </NavLink>
+      <div className="totalPrice">
+        <h4>Общая сумма: {cart.totalPrice}</h4>
+        <NavLink to="/payment">
+          <Button className="btn" variant="contained">
+            Оформить заказ
+          </Button>
+        </NavLink>
+      </div>
     </div>
   );
 };

@@ -18,6 +18,7 @@ function App() {
             <ProductContext>
               <PrimarySearchAppBar />
               <MainRoutes />
+              <Footer />
             </ProductContext>
           </FavoriteContextProvider>
         </CartContextProvider>

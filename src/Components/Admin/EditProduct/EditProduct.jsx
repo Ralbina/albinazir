@@ -18,6 +18,8 @@ const EditProduct = () => {
   );
   const [editPrice, setEditPrice] = useState(productDetails.price);
   const [editImg1, setEditImg1] = useState(productDetails.img1);
+  const [editImg2, setEditImg2] = useState(productDetails.img2);
+  const [editImg3, setEditImg3] = useState(productDetails.img3);
 
   const navigate = useNavigate();
   useEffect(() => {
@@ -31,6 +33,8 @@ const EditProduct = () => {
       description: editDescription,
       price: editPrice,
       img1: editImg1,
+      img2: editImg2,
+      img3: editImg3,
     };
     editProduct(id, editedProduct);
   };
@@ -106,13 +110,6 @@ const EditProduct = () => {
           className="inp
           "
         />
-        {/* <input
-          type="text"
-          placeholder="Цена"
-          value={editPrice}
-          onChange={(e) => setEditPrice(e.target.value)}
-        /> */}
-
         <TextField
           id="outlined-basic"
           label="Фото"
@@ -123,13 +120,26 @@ const EditProduct = () => {
           className="inp
           "
         />
-
-        {/* <input
-          type="text"
-          placeholder="Фото"
-          value={editImg1}
-          onChange={(e) => setEditImg1(e.target.value)}
-        /> */}
+        <TextField
+          id="outlined-basic"
+          label="Фото"
+          variant="outlined"
+          value={editImg2}
+          name="img2"
+          onChange={(e) => setEditImg2(e.target.value)}
+          className="inp
+          "
+        />
+        <TextField
+          id="outlined-basic"
+          label="Фото"
+          variant="outlined"
+          value={editImg3}
+          name="img3"
+          onChange={(e) => setEditImg3(e.target.value)}
+          className="inp
+          "
+        />
         <NavLink to="/list">
           <Button className="btn5" variant="contained" onClick={handleChange}>
             Save product

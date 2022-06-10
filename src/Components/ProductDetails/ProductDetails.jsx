@@ -158,25 +158,23 @@ const ProductDetails = () => {
             <Button
               onClick={() => addProductToCart(productDetails)}
               variant="contained"
-              color="success"
+              color="secondary"
               startIcon={<AddShoppingCartIcon />}
               fullWidth={true}
               sx={{ mt: "20px", height: "50px" }}
             >
-              Добавить в корзину
+              Add to Cart
             </Button>
-
-            <Alert
-              severity="info"
-              variant="outlined"
-              sx={{ fontWeight: 700, mt: "20px" }}
-            >
-              Телефон: +996558600104
-            </Alert>
             {user.email === "admin@gmail.com" ? (
               <div>
                 <NavLink to={`/edit/${productDetails.id}`}>
-                  <Button>Edit</Button>
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    sx={{ mt: "20px", height: "50px", width: "410px" }}
+                  >
+                    Edit
+                  </Button>
                 </NavLink>
               </div>
             ) : null}

@@ -26,19 +26,19 @@ const Home = () => {
       </div>
       <div className="container2">
         <div>
-          <h1 className="h1">
+          <h2 className="h1">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
             dolor!
-          </h1>
+          </h2>
           <img id="line" src={line} alt="BG2" />
 
-          <h2>
+          <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
             reiciendis voluptatum accusamus explicabo soluta voluptate. Laborum
             earum minus rerum aliquam! Lorem ipsum dolor sit amet consectetur
             adipisicing elit. In officia consectetur exercitationem earum!
             Accusantium est illum, sit error optio voluptas.
-          </h2>
+          </p>
         </div>
       </div>
       <div id="carousel">
@@ -64,7 +64,7 @@ const Home = () => {
           <h1 className="h1">A Little Bit of History</h1>
           <img id="line" src={line} alt="BG2" />
 
-          <h2>
+          <p>
             Back in 1945, Burt Baskin and Irv Robbins had a pretty great idea.
             See, they were big ice cream people. So while every other ice cream
             shop stuck with vanilla, chocolate, and strawberry, they decided to
@@ -77,7 +77,16 @@ const Home = () => {
             whether your kid’s team finally won a game, you found your left
             shoe, or you just got out of bed this morning, there's always a
             yay-worthy scoop ready for you. And we think that's pretty cool.
-          </h2>
+            “let’s offer 31 flavors instead” big. Because ice cream should be an
+            every day treat. And the people? Yeah, they loved that. It's safe to
+            say Burt and Irv’s passion made an impact. Fast forward about 75
+            years, and we’re over 1400 flavors strong. Which is… kinda crazy
+            when you think about it. But the best part is, we’ve got flavors for
+            everyone, for every day, and for every occasion. So, whether your
+            kid’s team finally won a game, you found your left shoe, or you just
+            got out of bed this morning, there's always a yay-worthy scoop ready
+            for you. And we think that's pretty cool.
+          </p>
         </div>
         <img id="logo1" src={logo1} alt="BG2" />
       </div>
@@ -86,15 +95,15 @@ const Home = () => {
         <div id="text">
           <h1 className="h1">A Little Bit of History</h1>
           <img id="line" src={line} alt="BG2" />
-          <h2>
+          <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
             reiciendis voluptatum accusamus explicabo soluta voluptate. Laborum
             earum minus rerum aliquam! Lorem ipsum dolor sit amet consectetur
             adipisicing elit. In officia consectetur exercitationem earum!
             Accusantium est illum, sit error optio voluptas.
-          </h2>
+          </p>
           <NavLink to="/products">
-            <Button id="btn" variant="contained" color="secondary" size="large">
+            <Button id="btn" variant="contained" color="secondary">
               Go to Shop
             </Button>
           </NavLink>
@@ -117,38 +126,37 @@ const Home = () => {
           <h1 className="h1">Keepin’ It Local</h1>
           <img id="line" src={line} alt="BG2" />
 
-          <h2>
+          <p>
             All of our 2400+ locations in the United States are locally owned
             and operated. So, no matter which shop you visit, you’re always
             supporting a local business. And that’s a reason to celebrate.
-          </h2>
+          </p>
         </div>
         <div>
           <img id="moreice" src={moreice} alt="BG2" />
         </div>
       </div>
       <div className="container6">
-        <div></div>
         <img id="gif" src={gif} alt="BG2" />
         <div className="text2">
           <h1 id="h1">GIF Lorem ipsum dolor sit amet.</h1>
           <img id="line" src={line} alt="BG2" />
-          <h2>
+          <p>
             All of our 2400+ locations in the United States are locally owned
             and operated. So, no matter which shop you visit, you’re always
             supporting a local business. And that’s a reason to celebrate.
-          </h2>
+          </p>
         </div>
       </div>
       <div id="container7">
         <div className="h2K">
           <h1 id="h1">GIF Lorem ipsum dolor sit amet.</h1>
           <img id="line" src={line} alt="BG2" />
-          <h2>
+          <p>
             All of our 2400+ locations in the United States are locally owned
             and operated. So, no matter which shop you visit, you’re always
             supporting a local business. And that’s a reason to celebrate.
-          </h2>
+          </p>
         </div>
 
         <video autoPlay loop muted>

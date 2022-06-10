@@ -14,6 +14,8 @@ const AddProduct = () => {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [img1, setImg1] = useState("");
+  const [img2, setImg2] = useState("");
+  const [img3, setImg3] = useState("");
   const navigate = useNavigate();
   const alertToastify = () => {
     toast.error("Заполните все поля!", {
@@ -32,7 +34,9 @@ const AddProduct = () => {
       type.trim() === "" ||
       description.trim() === "" ||
       price.trim() === "" ||
-      img1.trim() === ""
+      img1.trim() === "" ||
+      img2.trim() === "" ||
+      img3.trim() === ""
     ) {
       alertToastify();
     } else {
@@ -44,6 +48,8 @@ const AddProduct = () => {
       description: description,
       price: price,
       img1: img1,
+      img2: img2,
+      img3: img3,
     };
     addProduct(obj);
   };
@@ -101,6 +107,26 @@ const AddProduct = () => {
           value={img1}
           name="img1"
           onChange={(e) => setImg1(e.target.value)}
+          className="inp
+          "
+        />
+        <TextField
+          id="outlined-basic"
+          label="Фото"
+          variant="outlined"
+          value={img2}
+          name="img2"
+          onChange={(e) => setImg2(e.target.value)}
+          className="inp
+          "
+        />
+        <TextField
+          id="outlined-basic"
+          label="Фото"
+          variant="outlined"
+          value={img3}
+          name="img3"
+          onChange={(e) => setImg3(e.target.value)}
           className="inp
           "
         />
