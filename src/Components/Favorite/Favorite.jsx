@@ -18,6 +18,7 @@ import { ExpandMore } from "@mui/icons-material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { cartContext } from "../../Context/CartContext";
+import "./Favoritw.css";
 const Favorite = () => {
   const { favorite, getFavorite, deleteFavoriteProduct } =
     useContext(favoriteContext);
@@ -28,7 +29,7 @@ const Favorite = () => {
   return (
     <div className="favorite">
       {favorite.favoriteProducts ? (
-        <div>
+        <div className="favorite1">
           {favorite.favoriteProducts.map((elem) => (
             <Card key={elem.item.id} sx={{ maxWidth: 345 }}>
               <CardHeader
@@ -56,10 +57,14 @@ const Favorite = () => {
                 </Typography>
               </CardContent>
               <CardActions disableSpacing>
-                <Button onClick={() => addProductToCart(elem.item)}>
+                <Button
+                  className="btn"
+                  onClick={() => addProductToCart(elem.item)}
+                >
                   <AddShoppingCartIcon />
                 </Button>
                 <Button
+                  className="btn"
                   onClick={() => deleteFavoriteProduct(elem.item.id)}
                   variant="contained"
                 >

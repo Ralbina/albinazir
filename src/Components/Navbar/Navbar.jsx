@@ -29,7 +29,8 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import { cartContext } from "../../Context/CartContext";
 import { favoriteContext } from "../../Context/FavoriteContext";
 import { authContext } from "../../Context/AuthContext";
-
+import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
+import CottageIcon from "@mui/icons-material/Cottage";
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
@@ -166,6 +167,27 @@ export default function PrimarySearchAppBar() {
         </IconButton>
         <p>Cart</p>
       </MenuItem>
+
+      <MenuItem>
+        <IconButton size="large" color="inherit" aria-label="add to favorites">
+          <NavLink to="/list">
+            <ShoppingCartCheckoutIcon />
+            <Badge color="secondary"></Badge>
+          </NavLink>
+        </IconButton>
+        <p>Shop</p>
+      </MenuItem>
+
+      <MenuItem>
+        <IconButton size="large" color="inherit" aria-label="add to favorites">
+          <NavLink to="/">
+            <CottageIcon />
+            <Badge color="secondary"></Badge>
+          </NavLink>
+        </IconButton>
+        <p>Home</p>
+      </MenuItem>
+
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           size="large"
@@ -177,9 +199,6 @@ export default function PrimarySearchAppBar() {
           <AccountCircle />
         </IconButton>
         <p>Profile</p>
-      </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
-        <p>About</p>
       </MenuItem>
     </Menu>
   );
@@ -194,35 +213,32 @@ export default function PrimarySearchAppBar() {
             width="8%"
             height="10%"
             className="logo"
-          />{" "}
+          />
           <LiveSearch />
-          <NavLink className="nav-link" to="/">
-            <Button variant="contained">Home</Button>
-          </NavLink>
-          <NavLink className="nav-link" to="/list">
-            <Button variant="contained">Products</Button>
-          </NavLink>
-          {user.email === "admin@gmail.com" ? (
-            <NavLink className="nav-link" to="/add">
-              <Button variant="contained">Add Produts</Button>
-            </NavLink>
-          ) : null}
-          <Button variant="contained" className="btn">
-            About
-          </Button>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <NavLink to="/favorite">
-              <IconButton
-                size="large"
-                color="inherit" // белый цвет у иконки почта
-                aria-label="add to favorites"
-              >
+            <NavLink className="nav-link" to="/">
+              <p variant="contained">Home</p>
+            </NavLink>
+            <NavLink className="nav-link" to="/list">
+              <p variant="contained">Products</p>
+            </NavLink>
+            {user.email === "admin@gmail.com" ? (
+              <NavLink className="nav-link" to="/add">
+                <p variant="contained">Add Produts</p>
+              </NavLink>
+            ) : null}
+            <IconButton
+              size="large"
+              color="inherit" // белый цвет у иконки почта
+              aria-label="add to favorites"
+            >
+              <NavLink to="/favorite">
                 <Badge badgeContent={favoriteLenght} color="secondary">
                   <FavoriteIcon />
                 </Badge>
-              </IconButton>
-            </NavLink>
+              </NavLink>
+            </IconButton>
 
             <IconButton
               size="large"

@@ -75,7 +75,7 @@ const ProductsList = () => {
     setPageNumber(selected);
   };
   return (
-    <div>
+    <div id="filter1">
       <div className="filter">
         <Filter type={type} setType={setType} />
       </div>
@@ -126,9 +126,6 @@ const ProductsList = () => {
                     marginBottom: "30px",
                   }}
                 >
-                  {/* <Button className="btn1" size="small" variant="outlined">
-              Edit
-            </Button> */}
                   {user.email === "admin@gmail.com" ? (
                     <div>
                       <Button
@@ -151,17 +148,17 @@ const ProductsList = () => {
                       Preview
                     </Button>
                   </NavLink>
-                  <Button
-                    onClick={() => addProductToFavorite(item)}
-                    aria-label="add to favorites"
-                  >
-                    <FavoriteIcon />
-                  </Button>
 
                   <Button onClick={() => addProductToCart(item)}>
                     <AddShoppingCartIcon />
                   </Button>
                 </CardActions>
+                <Button
+                  onClick={() => addProductToFavorite(item)}
+                  aria-label="add to favorites"
+                >
+                  <FavoriteIcon />
+                </Button>
               </Card>
             ))
           : null}
